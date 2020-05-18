@@ -7,11 +7,11 @@
 	min-width: 15vw;
 	background-color: #fafafa;
 	position: fixed;
-	height: 748px;
+	height: 100%;
 	z-index: 1;
 	&__inner{
 		padding: 57px 10px 37px 16px;
-		height: 100%;
+		height: 748px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -88,7 +88,7 @@
 .greetings{
 	background-repeat: no-repeat;
 	background-size: cover;
-	height:693px;
+	height:691px;
 	position: relative;
 	top: 57px;
 	&__wrapper{
@@ -158,6 +158,7 @@
 		margin-right: 15px;
 		line-height: 21px;
 		letter-spacing: 0.005em;
+		max-width: 533px;
 		p{
 			margin-bottom: 25px;
 		}

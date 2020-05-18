@@ -43,8 +43,8 @@ button{
 }
 .content{
   width: 85vw;
-  position: relative;
-  left: 15vw;
+  // position: relative;
+  margin-left: 15vw;
 }
 .container{
   max-width: 1190px;
@@ -60,12 +60,6 @@ button{
   font-weight: 700;
   font-size: 47px;
   margin-bottom: 78px;
-}
-.col-50{
-  flex:0 0 50%;
-  max-width: 50%;
-  position: relative;
-  width: 100%;
 }
 
 .btn_link{
