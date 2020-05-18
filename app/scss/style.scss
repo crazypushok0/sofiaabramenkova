@@ -67,12 +67,6 @@
 			font-family: $inter;
 		}
 	}
-	&__title{
-		font-weight: 700;
-		font-family: $playfair;
-		font-size: 22px;
-		line-height: 29px;
-	}
 	&__baskets{
 		position: relative;
 		padding: 5px 5px 0 0;
@@ -444,4 +438,62 @@
 		padding: 46px;
 	}
 
+}
+
+.contacts{
+	&__title{
+		width: 300px;
+	}
+	&__inner{
+		font-size: 17px;
+		line-height: 21px;
+		letter-spacing: 0.005em;
+	}
+	&__social{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 75px 0;
+		li + li{
+			margin-left: 120px;
+		}
+		a{
+			border: 1px solid #E4E4E4;
+			box-shadow: 0px 0px 20px rgba(38, 38, 38, 0.1);
+			border-radius: 4px;
+			width: 182px;
+			height: 117px;
+			display: flex;
+			align-items: center;	
+			flex-direction: column;
+			justify-content: space-between;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 17px;
+			letter-spacing: 0.005em;
+			padding: 12px 5px;
+			color: #292929;
+			opacity: 0.2;
+			transition: all .3s;
+			&::before{
+				font-size: 60px;
+			}
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.footer{
+	background-color: #292929;
+	position: relative;
+	z-index: 1;
+	&__inner{
+		display: flex;
+		padding: 24px 53px;
+	}
+	&__left{
+		
+	}
 }

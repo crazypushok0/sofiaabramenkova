@@ -115,6 +115,7 @@ button:focus {
 .content {
   width: 85vw;
   margin-left: 15vw;
+  padding-bottom: 104px;
 }
 
 .container {
@@ -146,6 +147,10 @@ button:focus {
   line-height: 18px;
   padding: 18px 25px;
   font-weight: 500;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
 }
 
 /* Слайдер */
@@ -366,13 +371,6 @@ button:focus {
   border: none;
   font-size: 14px;
   font-family: "Inter", sans-serif;
-}
-
-.top-line__title {
-  font-weight: 700;
-  font-family: "Playfair Display", serif;
-  font-size: 22px;
-  line-height: 29px;
 }
 
 .top-line__baskets {
@@ -768,4 +766,64 @@ button:focus {
   letter-spacing: 0.005em;
   font-family: "Inter", sans-serif;
   padding: 46px;
+}
+
+.contacts__title {
+  width: 300px;
+}
+
+.contacts__inner {
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: 0.005em;
+}
+
+.contacts__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 75px 0;
+}
+
+.contacts__social li + li {
+  margin-left: 120px;
+}
+
+.contacts__social a {
+  border: 1px solid #E4E4E4;
+  box-shadow: 0px 0px 20px rgba(38, 38, 38, 0.1);
+  border-radius: 4px;
+  width: 182px;
+  height: 117px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.005em;
+  padding: 12px 5px;
+  color: #292929;
+  opacity: 0.2;
+  transition: all .3s;
+}
+
+.contacts__social a::before {
+  font-size: 60px;
+}
+
+.contacts__social a:hover {
+  opacity: 1;
+}
+
+.footer {
+  background-color: #292929;
+  position: relative;
+  z-index: 1;
+}
+
+.footer__inner {
+  display: flex;
+  padding: 24px 53px;
 }
