@@ -110,6 +110,7 @@ button:focus {
   width: 100%;
   display: flex;
   overflow: hidden;
+  padding-right: 20px;
 }
 
 .content {
@@ -147,6 +148,7 @@ button:focus {
   line-height: 18px;
   padding: 18px 25px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .mb-2 {
@@ -295,8 +297,110 @@ button:focus {
   height: 180px;
 }
 
+.work__fade-slider .slick-list {
+  overflow: hidden;
+}
+
+.work__fade-slider .slick-track {
+  display: flex;
+}
+
+.work__fade {
+  max-width: 555px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(46, 46, 46, 0.15);
+}
+
+.work__fade-slider {
+  height: 320px;
+}
+
+.work__fade-text {
+  padding: 23px 34px;
+}
+
+.work__fade-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.work__fade-parameters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.work__fade-size {
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+}
+
+.work__fade-size span {
+  font-weight: 500;
+  font-size: 23px;
+  margin-top: 13px;
+  display: block;
+}
+
+.work__fade-size span small {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.work__fade-color {
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+}
+
+.work__fade-color-list {
+  margin-top: 13px;
+  display: flex;
+}
+
+.work__fade-radio + .work__fade-radio {
+  margin-left: 17px;
+}
+
+.work__fade-radio input {
+  display: none;
+}
+
+.work__fade-description {
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 26px;
+}
+
+.work__fade-box {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work__fade-price {
+  font-weight: 700;
+  font-size: 27px;
+}
+
+.work__fade-btn {
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+  width: 114px;
+  height: 45px;
+  color: #292929;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
 .header {
-  min-width: 15vw;
+  max-width: 15vw;
+  width: 100%;
   background-color: #fafafa;
   position: fixed;
   height: 100%;
@@ -304,11 +408,12 @@ button:focus {
 }
 
 .header__inner {
-  padding: 57px 10px 37px 16px;
+  padding: 57px 10px 37px 57px;
   height: 748px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  white-space: normal;
 }
 
 .header__menu {
@@ -357,6 +462,7 @@ button:focus {
   position: fixed;
   z-index: 1;
   width: 85vw;
+  padding-right: 37px;
 }
 
 .top-line__inner {
@@ -367,10 +473,35 @@ button:focus {
   align-items: center;
 }
 
-.top-line__inner select {
+.top-line__lang {
+  position: relative;
+  width: 40px;
+}
+
+.top-line__lang::after {
+  content: '';
+  position: absolute;
+  background-image: url(../img/icon/lang-arrow.svg);
+  width: 10px;
+  height: 5px;
+  right: 0;
+  bottom: 2px;
+  pointer-events: none;
+}
+
+.top-line__lang select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
   border: none;
   font-size: 14px;
   font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+.top-line__lang select::-ms-expand {
+  display: none;
 }
 
 .top-line__baskets {
@@ -535,6 +666,8 @@ button:focus {
   margin-bottom: 30px;
   color: #fff;
   overflow: hidden;
+  display: block;
+  cursor: pointer;
 }
 
 .work__item-inner {
@@ -825,5 +958,60 @@ button:focus {
 
 .footer__inner {
   display: flex;
-  padding: 24px 53px;
+  padding: 35px 53px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__left p {
+  margin-top: 18px;
+  color: #fff;
+  opacity: .6;
+  font-size: 11px;
+  line-height: 130.69%;
+  letter-spacing: -0.005em;
+  width: 168px;
+}
+
+.footer__content {
+  align-self: center;
+}
+
+.footer__menu-list {
+  display: flex;
+}
+
+.footer__menu-list li + li {
+  margin-left: 40px;
+}
+
+.footer__menu-list a {
+  font-weight: 500;
+  font-size: 15px;
+  color: #FAFAFA;
+  opacity: 0.4;
+  transition: all .3s;
+}
+
+.footer__menu-list a:hover {
+  opacity: 1;
+}
+
+.footer .arrow__top {
+  width: 48px;
+  height: 24px;
+  border-radius: 3px;
+  position: relative;
+  padding: 0;
+}
+
+.footer .arrow__top::before {
+  content: '';
+  position: absolute;
+  background-image: url(../img/icon/arrow-down-b.svg);
+  width: 6px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
 }

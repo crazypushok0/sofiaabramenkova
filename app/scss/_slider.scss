@@ -43,6 +43,7 @@
 	.slick-track{
 		display: flex;
 	}
+
 	.slick-arrow{
 		position: absolute;
 		top: 50%;
@@ -157,5 +158,15 @@
 	.slick-slide{
 		max-width: 1008px;
 		height: 180px;
+	}
+}
+
+.work__fade-slider{
+	.slick-list {
+		overflow: hidden;
+	}
+
+	.slick-track{
+		display: flex;
 	}
 }

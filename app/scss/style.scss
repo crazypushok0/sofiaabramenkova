@@ -2,19 +2,23 @@
 @import 'vars';
 @import 'global';
 @import 'slider';
+@import 'modal';
 
 .header{
-	min-width: 15vw;
+	max-width: 15vw;
+	width: 100%;
 	background-color: #fafafa;
 	position: fixed;
 	height: 100%;
 	z-index: 1;
 	&__inner{
-		padding: 57px 10px 37px 16px;
+		padding: 57px 10px 37px 57px;
 		height: 748px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		white-space: normal;
+
 	}
 	&__menu{
 		font-weight: 500;
@@ -55,16 +59,37 @@
 	position: fixed;
 	z-index: 1;
 	width: 85vw;
+	padding-right: 37px;
 	&__inner{
 		padding: 0 37px;
 		height: 57px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+	&__lang{
+		position: relative;
+		width: 40px;
+		&::after{
+			content: '';
+			position: absolute;
+			background-image: url(../img/icon/lang-arrow.svg);
+			width: 10px;
+			height: 5px;
+			right: 0;
+			bottom: 2px;
+			pointer-events: none;
+		}
 		select{
+			appearance: none;
+			width: 100%;
 			border: none;
 			font-size: 14px;
 			font-family: $inter;
+			cursor: pointer;
+		}
+		select::-ms-expand {
+			display: none;
 		}
 	}
 	&__baskets{
@@ -214,6 +239,8 @@
 		margin-bottom: 30px;
 		color:#fff;
 		overflow: hidden;
+		display: block;
+		cursor:pointer;
 		&-inner{
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.31%, rgba(0, 0, 0, 0.7) 98.37%);
 			width: 100%;
@@ -491,9 +518,55 @@
 	z-index: 1;
 	&__inner{
 		display: flex;
-		padding: 24px 53px;
+		padding: 35px 53px;
+		justify-content: space-between;
+		align-items: center;
 	}
 	&__left{
-		
+		p{
+			margin-top: 18px;
+			color:#fff;
+			opacity: .6;
+			font-size: 11px;
+			line-height: 130.69%;
+			letter-spacing: -0.005em;
+			width: 168px;
+		}
+	}
+	&__content{
+		align-self: center;
+	}
+	&__menu-list{
+		display: flex;
+		li + li{
+			margin-left: 40px;
+		}
+		a {
+			font-weight: 500;
+			font-size: 15px;
+			color: #FAFAFA;
+			opacity: 0.4;
+			transition: all .3s;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+	.arrow__top{
+		width: 48px;
+		height: 24px;
+		border-radius: 3px;
+		position: relative;
+		padding: 0;
+		&::before{
+			content: '';
+			position: absolute;
+			background-image: url(../img/icon/arrow-down-b.svg);
+			width: 6px;
+			height: 12px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(180deg);
+		}
 	}
 }
