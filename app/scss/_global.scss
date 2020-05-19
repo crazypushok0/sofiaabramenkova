@@ -12,6 +12,9 @@ html{
 body{
   font-family: $mont;
   color: #292929;
+  &.lock{
+    overflow: hidden;
+  }
 }
 a{
   text-decoration: none;
@@ -79,4 +82,29 @@ button{
 }
 .mb-2{
   margin-bottom: 2rem;
+}
+.btn-close{
+  position: absolute;
+  z-index: 99;
+  right: 20px;
+  top: 10px;
+  span{
+      width: 3px;
+      height: 22px;
+      background: #fff ;
+      display: block;
+      border-radius: 3px;
+      position: relative;
+      transform:rotate(-45deg);
+      &::after{
+        content:'';
+        position: absolute;
+        width: 3px;
+        height: 22px;
+        background: #fff ;
+        display: block;
+        border-radius: 3px;
+        transform:rotate(90deg);
+      }
+    }
 }
