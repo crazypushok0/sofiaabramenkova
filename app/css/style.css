@@ -114,7 +114,6 @@ button:focus {
   width: 100%;
   display: flex;
   overflow: hidden;
-  padding-right: 20px;
 }
 
 .content {
@@ -465,11 +464,12 @@ button:focus {
 .work__fade-wrapper::before {
   content: '';
   position: fixed;
+  display: block;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.4);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 98;
@@ -646,7 +646,7 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.4);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 98;
@@ -738,7 +738,7 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.4);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 98;
@@ -770,7 +770,6 @@ button:focus {
 }
 
 .modal-individual__form textarea {
-  width: 313px;
   height: 148px;
   resize: none;
 }
@@ -819,7 +818,7 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.4);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 98;
@@ -853,6 +852,179 @@ button:focus {
 .modal-individual-win__text {
   font-size: 15px;
   text-align: center;
+}
+
+.baskets-fade {
+  transform: translateX(200%);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.baskets-fade__inner {
+  max-width: 375px;
+  width: 100%;
+  padding: 0 20px 78px 11px;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 5px 0px 0px 5px;
+  transition: all .3s;
+}
+
+.baskets-fade.active {
+  transform: translateX(0);
+}
+
+.baskets-fade__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 57px;
+  background-color: #fff;
+}
+
+.baskets-fade__btn-close {
+  background-image: url(../img/icon/back.svg);
+  width: 7px;
+  height: 12px;
+}
+
+.baskets-fade__title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.baskets-fade__items {
+  overflow-y: auto;
+  padding-right: 11px;
+  max-height: 242px;
+}
+
+.baskets-fade__item {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  border-bottom: 1px solid #292929;
+}
+
+.baskets-fade__item-btn-close {
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #000;
+  top: 8px;
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+.baskets-fade__item-btn-close::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #000;
+  transform: rotate(90deg);
+}
+
+.baskets-fade__item-img {
+  width: 86px;
+  height: 95px;
+  border-radius: 3px;
+}
+
+.baskets-fade__item-img img {
+  max-width: none;
+  border-radius: 3px;
+}
+
+.baskets-fade__item__text {
+  width: 100%;
+  margin-left: 12px;
+}
+
+.baskets-fade__item-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.baskets-fade__item__size {
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.baskets-fade__item__color {
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.baskets-fade__item__color span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin-left: 11px;
+}
+
+.baskets-fade__item__parametrs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.baskets-fade__item__counters {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.baskets-fade__item__price {
+  font-weight: 500;
+}
+
+.baskets-fade__summa {
+  font-size: 22px;
+  margin-top: 28px;
+  text-align: right;
+}
+
+.baskets-fade__summa span {
+  font-weight: 600;
+}
+
+.baskets-fade__form {
+  margin: 27px auto 0;
+  display: flex;
+  flex-direction: column;
+  width: 313px;
+}
+
+.baskets-fade__form input {
+  text-align: center;
+  padding: 16px 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid #292929;
+  box-shadow: 0px 0px 10px rgba(46, 46, 46, 0.15);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #292929;
+}
+
+.baskets-fade__form button {
+  border: none;
+  align-self: center;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 12px 17px 10px;
+  margin-top: 30px;
 }
 
 .header {
@@ -897,6 +1069,7 @@ button:focus {
   font-size: 11px;
   display: flex;
   flex-direction: column;
+  margin: 200px 0 auto;
 }
 
 .header__contacts a {
@@ -916,10 +1089,14 @@ button:focus {
 
 .top-line {
   background-color: #fff;
-  position: fixed;
-  z-index: 1;
+  position: relative;
+  z-index: 3;
   width: 85vw;
-  padding-right: 37px;
+  height: 57px;
+}
+
+.top-line-wrapper {
+  position: relative;
 }
 
 .top-line__inner {
@@ -979,7 +1156,6 @@ button:focus {
   background-size: cover;
   height: 691px;
   position: relative;
-  top: 57px;
 }
 
 .greetings__wrapper {
@@ -1344,6 +1520,8 @@ button:focus {
   margin: 0 auto;
   height: 180px;
   margin-top: 18px;
+  position: relative;
+  z-index: 2;
 }
 
 .reviews__comment {

@@ -40,6 +40,7 @@
 		font-size: 11px;
 		display: flex;
 		flex-direction: column;
+		margin: 200px 0 auto;
 		a{
 			letter-spacing: 0.005em;
 			color: #292929;
@@ -56,10 +57,14 @@
 }
 .top-line{
 	background-color: #fff;
-	position: fixed;
-	z-index: 1;
+	// position: fixed;
+	position: relative;
+	z-index: 3;
 	width: 85vw;
-	padding-right: 37px;
+	height: 57px;
+	&-wrapper{
+		position: relative;
+	}
 	&__inner{
 		padding: 0 37px;
 		height: 57px;
@@ -109,7 +114,7 @@
 	background-size: cover;
 	height:691px;
 	position: relative;
-	top: 57px;
+	// top: 57px;
 	&__wrapper{
 		background: linear-gradient(90deg, rgba(0, 0, 0, 0.51) 0%, rgba(217, 217, 217, 0) 71.04%);
 		width: 100%;
@@ -452,6 +457,8 @@
 		margin: 0 auto;
 		height: 180px;
 		margin-top: 18px;
+		position: relative;
+		z-index: 2;
 	}
 	&__comment{
 		max-width: 1008px;

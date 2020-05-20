@@ -65,12 +65,14 @@ $(document).ready(function() {
 		e.preventDefault();
 		var work = $(this).parents('.work__fade-wrapper').attr('data-work');
 		$(this).parents('[data-work='+ work+ ']').removeClass('active');
+		$('.work__item').removeClass('active');
 		$('body').removeClass('lock');
 		return false;
 	});
 	$('.work__fade-wrapper').click(function(e) {
 		if ($(e.target).closest('.work__fade').length == 0) {
 			$(this).removeClass('active');
+			$('.work__item').removeClass('active');
 			$('body').removeClass('lock');					
 		}
 	});
@@ -87,12 +89,14 @@ $(document).ready(function() {
 		e.preventDefault();
 		var master = $(this).parents('.master-class__fade-wrapper').attr('master-class');
 		$(this).parents('[master-class='+ master+ ']').removeClass('active');
+		$('.master-class__item').removeClass('active');
 		$('body').removeClass('lock');
 		return false;
 	});
 	$('.master-class__fade-wrapper').click(function(e) {
 		if ($(e.target).closest('.master-class__fade').length == 0) {
 			$(this).removeClass('active');
+			$('.master-class__item').removeClass('active');
 			$('body').removeClass('lock');					
 		}
 	});
@@ -112,5 +116,17 @@ $(document).ready(function() {
 		// Индивидуальный заказ модальное окно
 	$('.modal-individual__form button').submit(function() {
 		$('.modal-individual-win').reveal();;
+	});
+
+	// baskets
+	$('.top-line__baskets').click(function(e){
+		e.preventDefault();
+		$('.baskets-fade').addClass('active');
+		$('body').addClass('lock');
+	});
+	$('.baskets-fade__btn-close').click(function(e){
+		e.preventDefault();
+		$('.baskets-fade').removeClass('active');
+		$('body').removeClass('lock');
 	});
 })
