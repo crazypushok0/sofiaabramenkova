@@ -356,12 +356,15 @@
 }
 
 .baskets-fade {
-	transform:translateX(200%);
-	position: absolute;
-	top: 0;
-	right: 0;
+	// transform:translateX(200%);
+	// position: absolute;
+	// top: 0;
+	// right: 0;
 	&__inner{
-		
+		transform:translateX(200%);
+		position: absolute;
+		top: 0;
+		right: 0;
 		max-width: 375px;
 		width: 100%;
 		padding: 0 20px 78px 11px;
@@ -369,10 +372,13 @@
 		backdrop-filter: blur(15px);
 		border-radius: 5px 0px 0px 5px;
 		transition: all .3s;
-	}
-	&.active{
+		&.active{
 		transform:translateX(0);
 	}
+	}
+	// &.active{
+	// 	transform:translateX(0);
+	// }
 	&__name {
 		display: flex;
 		align-items: center;

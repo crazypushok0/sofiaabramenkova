@@ -1,13 +1,17 @@
+
 $(document).ready(function() {
 	$('select[name="lang"]').change(function(){
 		var lang = this.value;
 		if(lang != window.location.pathname){
 			window.location.href = lang;
 		} 
-		
-		console.log(lang);
-		
 	});
+	$('a[href*="#"]:not([href="#"]').click(function() {
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 600);
+    return false;
+});
 	//Sliders
 	$('.gallery__inner').slick({
 		arrows: true,
@@ -107,26 +111,34 @@ $(document).ready(function() {
 		$('#modal-individual').addClass('active');
 		$('body').addClass('lock');
 	});
-		$('#modal-individual').click(function(e) {
+	$('#modal-individual').click(function(e) {
 		if ($(e.target).closest('.modal-individual__inner').length == 0) {
 			$(this).removeClass('active');
 			$('body').removeClass('lock');					
 		}
 	});
 		// Индивидуальный заказ модальное окно
-	$('.modal-individual__form button').submit(function() {
-		$('.modal-individual-win').reveal();;
-	});
+		$('.modal-individual__form button').submit(function() {
+			$('.modal-individual-win').reveal();;
+		});
 
 	// baskets
 	$('.top-line__baskets').click(function(e){
 		e.preventDefault();
-		$('.baskets-fade').addClass('active');
+		$('.baskets-fade__inner').addClass('active');
 		$('body').addClass('lock');
 	});
 	$('.baskets-fade__btn-close').click(function(e){
 		e.preventDefault();
-		$('.baskets-fade').removeClass('active');
+		$('.baskets-fade__inner').removeClass('active');
 		$('body').removeClass('lock');
 	});
-})
+	 $(document).mouseup(function (e){ // событие клика по странице
+        if (!$(".baskets-fade").is(e.target) && // если клик сделан не по элементу
+            $(".baskets-fade__inner").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+            $(".baskets-fade__inner").removeClass('active'); // скрываем блок
+         $('body').removeClass('lock');
+      }
+   });
+
+	});

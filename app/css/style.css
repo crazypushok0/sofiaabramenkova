@@ -854,14 +854,11 @@ button:focus {
   text-align: center;
 }
 
-.baskets-fade {
+.baskets-fade__inner {
   transform: translateX(200%);
   position: absolute;
   top: 0;
   right: 0;
-}
-
-.baskets-fade__inner {
   max-width: 375px;
   width: 100%;
   padding: 0 20px 78px 11px;
@@ -872,7 +869,7 @@ button:focus {
   transition: all .3s;
 }
 
-.baskets-fade.active {
+.baskets-fade__inner.active {
   transform: translateX(0);
 }
 
@@ -1037,7 +1034,7 @@ button:focus {
 }
 
 .header__inner {
-  padding: 57px 10px 37px 57px;
+  padding: 57px 10px 5px 57px;
   height: 748px;
   display: flex;
   flex-direction: column;
@@ -1069,7 +1066,6 @@ button:focus {
   font-size: 11px;
   display: flex;
   flex-direction: column;
-  margin: 200px 0 auto;
 }
 
 .header__contacts a {
@@ -1633,6 +1629,12 @@ button:focus {
   opacity: 1;
 }
 
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer .arrow__top {
   width: 48px;
   height: 24px;
@@ -1650,4 +1652,20 @@ button:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.footer__pay {
+  display: flex;
+  align-items: center;
+}
+
+.footer__pay-logo {
+  margin-left: 15px;
+}
+
+@media (max-height: 800px) {
+  .header__inner {
+    padding: 40px 10px 5px 40px;
+    height: 600px;
+  }
 }
