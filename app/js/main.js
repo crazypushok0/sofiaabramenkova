@@ -140,5 +140,22 @@ $(document).ready(function() {
          $('body').removeClass('lock');
       }
    });
+	 $('.top-line__btn-menu').click(function(e){
+		e.preventDefault();
+		$('.header').addClass('active');
+		$('body').addClass('lock');
+	});
+	$('.header__btn-close').click(function(e){
+		e.preventDefault();
+		$('.header').removeClass('active');
+		$('body').removeClass('lock');
+	});
+	 $(document).mouseup(function (e){ // событие клика по странице
+        if (!$(".header").is(e.target) && // если клик сделан не по элементу
+            $(".header__inner").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+            $(".header").removeClass('active'); // скрываем блок
+         $('body').removeClass('lock');
+      }
+   });
 
 	});

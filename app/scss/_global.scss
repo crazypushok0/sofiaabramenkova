@@ -47,7 +47,8 @@ button{
 }
 .content{
   width: 85vw;
-  // position: relative;
+  width: 100%;
+  position: relative;
   margin-left: 15vw;
   padding-bottom: 104px;
 }
@@ -60,25 +61,36 @@ button{
 .mt-149{
   margin-top: 149px;
 }
+@media (max-width: 992px) {
+  .mt-149{
+    margin-top: 51px;
+  }
+}
 .title{
   font-family: $inter;
   font-weight: 700;
-  font-size: 47px;
+  @include adaptiv-font(47, 35);
   margin-bottom: 78px;
+}
+@media (max-width: 992px) {
+  .title{
+    font-family: $mont;
+    margin-bottom: 21px;
+  }
 }
 
 .btn_link{
   background: linear-gradient(0deg, #FFD2B9, #FFD2B9);
-    box-shadow: 3px 3px 12px rgba(255, 210, 185, 0.5), -3px -3px 12px rgba(255, 210, 185, 0.5);
-    border-radius: 11px;
-    color:#292929;
-    font-family: $inter;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    padding: 18px 25px;
-    font-weight: 500;
-    cursor: pointer;
+  box-shadow: 3px 3px 12px rgba(255, 210, 185, 0.5), -3px -3px 12px rgba(255, 210, 185, 0.5);
+  border-radius: 11px;
+  color:#292929;
+  font-family: $inter;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 18px 25px;
+  font-weight: 500;
+  cursor: pointer;
 }
 .mb-2{
   margin-bottom: 2rem;
@@ -89,22 +101,48 @@ button{
   right: 20px;
   top: 10px;
   span{
+    width: 3px;
+    height: 22px;
+    background: #fff ;
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    transform:rotate(-45deg);
+    &::after{
+      content:'';
+      position: absolute;
       width: 3px;
       height: 22px;
       background: #fff ;
       display: block;
       border-radius: 3px;
-      position: relative;
-      transform:rotate(-45deg);
-      &::after{
-        content:'';
-        position: absolute;
-        width: 3px;
-        height: 22px;
-        background: #fff ;
-        display: block;
-        border-radius: 3px;
-        transform:rotate(90deg);
-      }
+      transform:rotate(90deg);
     }
+  }
+}
+
+.lang{
+  position: relative;
+  width: 40px;
+  &::after{
+    content: '';
+    position: absolute;
+    background-image: url(../img/icon/lang-arrow.svg);
+    width: 9px;
+    height: 5px;
+    right: 0;
+    bottom: 2px;
+    pointer-events: none;
+  }
+  select{
+    appearance: none;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-family: $inter;
+    cursor: pointer;
+  }
+  select::-ms-expand {
+    display: none;
+  }
 }
