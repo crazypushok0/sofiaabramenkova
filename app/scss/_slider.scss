@@ -43,6 +43,9 @@
 	.slick-track{
 		display: flex;
 	}
+	.slick-slide{
+		
+	}
 
 	.slick-arrow{
 		position: absolute;
@@ -150,6 +153,12 @@
 		right: 10px;
 		background-image: url(../img/icon/arrow-right.svg);
 	}
+	@media (max-width: 592px) {
+		.slick-arrow.slick-prev{
+			left: 10px;
+			right: 0;
+		}
+	}
 }
 .reviews__comments{
 	.slick-track{
@@ -157,7 +166,6 @@
 	}
 	.slick-slide{
 		max-width: 1008px;
-		height: 180px;
 	}
 }
 

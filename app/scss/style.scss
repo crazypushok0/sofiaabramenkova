@@ -242,6 +242,7 @@
 	&__wrapper{
 		display: flex;
 		flex-direction: column;
+
 	}
 	&__inner{
 		display: flex;
@@ -250,7 +251,7 @@
 		flex-wrap:wrap;
 	}
 	&__item{
-		width: 266px;
+		flex-basis:22.5%;
 		height: 266px;
 		border-radius: 5px;
 		background-repeat: no-repeat;
@@ -268,7 +269,6 @@
 			align-items: flex-end;
 			justify-content: space-between;
 			padding: 8px 22px 10px 14px;
-
 		}
 	}
 	&__name{
@@ -308,9 +308,10 @@
 		max-width: 350px;
 	}
 	&__text {
-		max-width: 510px;
+		max-width: 530px;
+		padding-right: 20px;
 		font-family: $inter;
-		font-size: 19px;
+		@include adaptiv-font(19,17);
 		line-height: 23px;
 		letter-spacing: 0.005em;
 		margin-bottom: 43px;
@@ -338,7 +339,7 @@
 		flex-wrap:wrap;
 	}
 	&__item{
-		width: 368px;
+		flex-basis:32%;
 		height: 207px;
 		border-radius: 5px;
 		background-repeat: no-repeat;
@@ -397,7 +398,7 @@
 		position: relative;
 	}
 	&__item {
-		height: 602px;
+		max-width: 100%;
 		img{
 			border-radius: 5px;
 			width: 100%;
@@ -407,13 +408,14 @@
 
 .reviews{
 	&__title{
-		margin-bottom: 127px;
+		// margin-bottom: 127px;
 	}
 	&__items{
 		position: relative;
 		max-width: 584px;
 		margin: 0 auto;
 		height: 130px;
+		margin-top: 140px;
 	}
 	&__item{
 		max-width: 584px;
@@ -423,11 +425,11 @@
 		border-radius: 5px;
 		display: flex;
 		margin: 0 auto;
+		position: relative;
 	}
 	&__img{
-		position: relative;
-		min-width: 128px;
-		min-height: 160px;
+		position: absolute;
+		max-width: 128px;
 		bottom: 40px;
 		left: 20px;
 		border-radius: 5px;
@@ -443,11 +445,12 @@
 		flex-direction: column;
 		text-align: center;
 		width: 300px;
-		position: relative;
+		right: 70px;
+		position: absolute;
 	}
 	&__name{
 		font-weight: 700;
-		font-size: 22px;
+		@include adaptiv-font(22, 15);
 	}
 	&__box{
 		margin-top: 28px;
@@ -458,7 +461,7 @@
 		span{
 			display: block;
 			font-weight: 700;
-			font-size: 14px;
+			@include adaptiv-font(14, 12);
 		}
 	}
 	&__arrows{
@@ -469,18 +472,16 @@
 	&__comments{
 		max-width: 1008px;
 		margin: 0 auto;
-		height: 180px;
 		margin-top: 18px;
 		position: relative;
 		z-index: 2;
 	}
 	&__comment{
 		max-width: 1008px;
-		height: 180px;
 		background: #F7F7F7;
 		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 		border-radius: 5px;
-		font-size: 17px;
+		@include adaptiv-font(17, 14);
 		line-height: 21px;
 		letter-spacing: 0.005em;
 		font-family: $inter;
@@ -537,7 +538,7 @@
 .footer{
 	background-color: #292929;
 	position: relative;
-	z-index: 1;
+	z-index: 4;
 	&__inner{
 		display: flex;
 		padding: 35px 53px;
