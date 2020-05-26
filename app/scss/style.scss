@@ -305,7 +305,7 @@
 }
 .individual-order{
 	&__title{
-		width: 290px;
+		max-width: 350px;
 	}
 	&__text {
 		max-width: 510px;

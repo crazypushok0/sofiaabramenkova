@@ -1404,7 +1404,7 @@ button:focus {
 }
 
 .individual-order__title {
-  width: 290px;
+  max-width: 350px;
 }
 
 .individual-order__text {
@@ -1733,17 +1733,18 @@ button:focus {
 
 @media (max-width: 592px) {
   .container {
-    margin-left: 20px;
+    margin-left: 12px;
   }
   .header.active {
     max-width: 100% !important;
     width: 100%;
   }
   .top-line__inner {
-    padding: 0 20px;
+    padding: 0 12px;
   }
   .baskets-fade__inner {
     max-width: 100%;
+    overflow: auto;
   }
   .greetings {
     height: 576px;
@@ -1751,7 +1752,7 @@ button:focus {
   .greetings__inner {
     transform: translateY(0);
     top: 51px;
-    left: 20px;
+    left: 27px;
     max-width: 400px;
     padding-right: 20px;
     font-family: "Montserrat Alternates", sans-serif;
@@ -1767,6 +1768,13 @@ button:focus {
   }
   .history__img {
     display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .work__item {
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -1834,5 +1842,15 @@ button:focus {
 @media (max-width: 1460px) {
   .header__inner {
     padding: 57px 10px 5px 30px;
+  }
+  .work__wrapper {
+    padding-right: 20px;
+  }
+  .work__inner {
+    justify-content: flex-start;
+  }
+  .work__item {
+    margin-right: 15px;
+    margin-bottom: 15px;
   }
 }
