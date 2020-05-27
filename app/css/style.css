@@ -539,6 +539,7 @@ button:focus {
 .work__fade-slider img {
   border-radius: 5px 5px 0 0;
   max-width: none;
+  max-width: 555px;
 }
 
 .work__fade-text {
@@ -715,7 +716,8 @@ button:focus {
 
 .master-class__fade-slider img {
   border-radius: 5px 5px 0 0;
-  max-width: none;
+  width: 100%;
+  max-width: 496px;
 }
 
 .master-class__fade-text {
@@ -1072,6 +1074,52 @@ button:focus {
   font-size: 13px;
   padding: 12px 17px 10px;
   margin-top: 30px;
+}
+
+.modal-lang {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.modal-lang__inner {
+  width: 180px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 24px 19px;
+  border-radius: 4px;
+}
+
+.modal-lang__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.modal-lang__box {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-lang__box div {
+  width: 36px;
+  height: 0;
+  border: 0.1px solid #292929;
+  transform: rotate(90deg);
+}
+
+.modal-lang__link {
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 32px;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #262626;
 }
 
 .header {
@@ -1546,7 +1594,6 @@ button:focus {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 300px;
   right: 70px;
   position: absolute;
 }
@@ -1674,6 +1721,7 @@ button:focus {
 
 .footer__menu-list {
   display: flex;
+  margin: 0 10px;
 }
 
 .footer__menu-list li + li {
@@ -1720,6 +1768,7 @@ button:focus {
 .footer__pay {
   display: flex;
   align-items: center;
+  margin-top: 18px;
 }
 
 .footer__pay-logo {
@@ -1729,6 +1778,12 @@ button:focus {
 @media (max-width: 1460px) {
   .header__inner {
     padding: 57px 10px 5px 30px;
+  }
+  .footer__menu-list li + li {
+    margin-left: 20px;
+  }
+  .footer__menu-list a {
+    font-size: 11px;
   }
 }
 
@@ -1805,6 +1860,9 @@ button:focus {
   .work__item {
     flex-basis: 31%;
   }
+  .footer__menu-list {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1853,6 +1911,18 @@ button:focus {
   .work__item {
     flex-basis: 47%;
   }
+  .work__fade {
+    max-width: 450px;
+  }
+  .work__fade-slider {
+    height: 260px;
+  }
+  .work__fade-img {
+    height: 260px;
+  }
+  .work__fade-img img {
+    max-width: 450px;
+  }
   .reviews__comment {
     padding: 20px;
     font-family: "Montserrat Alternates", sans-serif;
@@ -1899,6 +1969,19 @@ button:focus {
   }
   .master-class__item {
     flex-basis: 100%;
+    margin-right: 0;
+  }
+  .master-class__fade {
+    max-width: 400px;
+  }
+  .master-class__fade-slider {
+    height: 220px;
+  }
+  .master-class__fade-img {
+    height: 220px;
+  }
+  .master-class__fade-img img {
+    max-width: 400px;
   }
   .reviews__img {
     bottom: 120px;
@@ -1918,6 +2001,100 @@ button:focus {
   }
   .work__item {
     flex-basis: 100%;
+    margin-right: 0;
+  }
+  .work__fade {
+    max-width: 370px;
+  }
+  .work__fade-slider {
+    height: 213px;
+  }
+  .work__fade-img {
+    height: 213px;
+  }
+  .work__fade-img img {
+    max-width: 370px;
+  }
+  .footer__inner {
+    padding: 20px;
+  }
+  .footer__right {
+    align-items: flex-end;
+  }
+  .footer .arrow__top {
+    width: 35px;
+  }
+}
+
+@media (max-width: 445px) {
+  .master-class__fade {
+    max-width: 370px;
+  }
+  .master-class__fade-slider {
+    height: 203px;
+  }
+  .master-class__fade-img {
+    height: 203px;
+  }
+  .master-class__fade-img img {
+    max-width: 370px;
+  }
+}
+
+@media (max-width: 385px) {
+  .work__fade {
+    max-width: 310px;
+  }
+  .work__fade-slider {
+    height: 179px;
+  }
+  .work__fade-img {
+    height: 179px;
+  }
+  .work__fade-img img {
+    max-width: 310px;
+  }
+  .work__fade-text {
+    padding: 14px 11px;
+  }
+  .work__fade-title {
+    font-size: 20px;
+  }
+  .work__fade-size {
+    font-size: 13px;
+  }
+  .work__fade-size span {
+    font-size: 18px;
+  }
+  .work__fade-price {
+    font-size: 23px;
+  }
+  .work__fade-description {
+    font-size: 13px;
+  }
+  .master-class__fade {
+    max-width: 310px;
+  }
+  .master-class__fade-slider {
+    height: 170px;
+  }
+  .master-class__fade-img {
+    height: 170px;
+  }
+  .master-class__fade-img img {
+    max-width: 310px;
+  }
+  .master-class__fade-text {
+    padding: 14px 11px;
+  }
+  .master-class__fade-price {
+    font-size: 23px;
+  }
+  .master-class__fade-title {
+    font-size: 20px;
+  }
+  .master-class__fade-parameters {
+    font-size: 14px;
   }
 }
 
