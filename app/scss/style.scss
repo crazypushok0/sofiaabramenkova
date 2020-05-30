@@ -278,6 +278,9 @@
 		font-weight: 700;
 		font-size: 20px;
 	}
+	&__size,&__description{
+		display: none;
+	}
 	&__plus{
 		span{
 			width: 3px;
@@ -361,6 +364,9 @@
 	}
 	&__name{
 		font-size: 22px;
+	}
+	&__parameters{
+		display: none;
 	}
 	&__price{
 		font-weight: 700;

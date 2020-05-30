@@ -221,6 +221,16 @@
 			display: flex;
 			align-items: center;
 		}
+		&-name{
+			span{
+				&::before{
+					content: '«';
+				}
+				&::after{
+					content: '»';
+				}
+			}
+		}
 	}
 }
 
@@ -354,11 +364,7 @@
 }
 
 .baskets-fade {
-	// transform:translateX(200%);
-	// position: absolute;
-	// top: 0;
-	// right: 0;
-	}
+
 	&__inner{
 		transform:translateX(200%);
 		position: absolute;
@@ -374,9 +380,7 @@
 			transform:translateX(0);
 		}
 	}
-	// &.active{
-	// 	transform:translateX(0);
-	// }
+
 	&__name {
 		display: flex;
 		align-items: center;
@@ -511,9 +515,7 @@
 			padding: 12px 17px 10px;
 			margin-top: 30px;
 		}
-
 	}
-
 }
 .modal-lang {
 	position: absolute;
